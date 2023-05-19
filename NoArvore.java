@@ -105,12 +105,12 @@ public class NoArvore<T> {
         while (filho != null) {
             int alturaFilho = calcularAltura(filho);
             if (alturaFilho == -1) {
-                return -1; // Se algum filho for desbalanceado, a árvore toda é desbalanceada
+                return -1;
             }
             if (alturaMaxima == -1) {
-                alturaMaxima = alturaFilho; // Inicializa a altura máxima com o primeiro filho válido
+                alturaMaxima = alturaFilho;
             } else if (Math.abs(alturaFilho - alturaMaxima) > 1) {
-                return -1; // Se algum filho tiver altura muito diferente, a árvore é desbalanceada
+                return -1;
             } else {
                 alturaMaxima = Math.max(alturaMaxima, alturaFilho);
             }
